@@ -1,0 +1,19 @@
+body {
+  position: relative;
+  min-width: $width-mobile;
+  max-width: $width-desktop;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+a {
+  outline: none;
+}

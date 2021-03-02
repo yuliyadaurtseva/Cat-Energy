@@ -1,0 +1,208 @@
+.categories {
+  width: 100%;
+  @include max-width-mobile;
+  margin-bottom: 17px;
+  @include padding-mobile;
+  box-sizing: border-box;
+  @media (min-width: $width-tablet) {
+    @include max-width-tablet;
+    margin-bottom: 45px;
+    @include padding-tablet;
+  }
+  @media (min-width: $width-desktop) {
+    max-width: 100%;
+    margin-bottom: 73px;
+    @include padding-desktop;
+  }
+}
+
+.categories__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include list;
+  @media (min-width: $width-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.categories__item {
+  position: relative;
+  min-height: 266px;
+  margin-bottom: 20px;
+  @include padding-mobile;
+  padding-bottom: 21px;
+  box-sizing: border-box;
+  background-color: $color-04;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width: $width-tablet) {
+    min-height: 372px;
+    margin-bottom: 30px;
+    padding-left: 53px;
+    box-sizing: border-box;
+  }
+  @media (min-width: $width-desktop) {
+    width: 46.7%;
+    margin-bottom: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $color-06;
+    @media (min-width: $width-tablet) {
+      top: 92px;
+      left: 63%;
+      width: 200px;
+      height: 200px;
+    }
+    @media (min-width: $width-desktop) {
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-position: 0 0;
+    background-repeat: no-repeat;  
+  }
+  &--slim::after {
+    top: 22px;
+    left: 30px;
+    width: 35px;
+    height: 49px;
+    background-image: url("../img/svg/cat-slim.svg");
+    @media (min-width: $width-tablet) {
+      top: 80px;
+      left: 67.3%;
+      width: 140px;
+      height: 194px;
+    }
+    @media (min-width: $width-desktop) {
+      top: 41px;
+      left: 66px;
+      width: 70px;
+      height: 97px;
+    }
+  }
+  &--pro::after {
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/svg/cat-pro.svg");
+    @media (min-width: $width-tablet) {
+      top: 135px;
+      left: 58.2%;
+      width: 268px;
+      height: 112px;
+    }
+    @media (min-width: $width-desktop) {
+      top: 69px;
+      left: 34px;
+      width: 134px;
+      height: 56px;
+    }
+  }
+}
+
+.categories__title {
+  width: 60%;
+  margin: 0;
+  padding: 30px 0 29px 71px;
+  font-size: 24px;
+  line-height: 37px;
+  color: $color-01;
+  font-weight: 400;
+  text-transform: uppercase;
+  @media (min-width: $width-tablet) {
+    padding: 76px 0 25px;
+    font-size: 36px;
+    line-height: 37px;
+  }
+  @media (min-width: $width-desktop) {
+    padding: 76px 0 74px 161px;
+  }
+}
+
+.categories__text {
+  margin-top: 0;
+  margin-bottom: 18px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid $color-10;
+  @include text;
+  color: $color-03;
+  @media (min-width: $width-tablet) {
+    min-height: 72px;
+    margin-bottom: 34px;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: $width-desktop) {
+    margin-bottom: 9px;
+  }
+  &--slim {
+    @media (min-width: $width-tablet) {
+      width: 60%;
+    }
+    @media (min-width: $width-desktop) {
+      width: 100%;
+    }
+  }
+  &--pro {
+    @media (min-width: $width-tablet) {
+      width: 54%;
+    }
+    @media (min-width: $width-desktop) {
+      width: 90%;
+    }
+  }
+}
+
+.categories__link {
+  position: relative;
+  padding-right: 50px;
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-01;
+  text-transform: uppercase;
+  text-decoration: none;
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 97px;
+    width: 24px;
+    height: 11px;
+    background: url("../img/svg/right-arrow-long.svg") no-repeat 0 0;
+    @media (min-width: $width-tablet) {
+      top: 10px;
+      left: 131px;
+    }  
+  }
+  &:hover {
+    &::after {
+      width: 33px;
+      height: 11px;
+      background-image: url("../img/svg/right-arrow-verylong.svg");
+    }
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,49 @@
+.program {
+  @include max-width-mobile;
+  margin-bottom: 32px;
+  @media (min-width: $width-tablet) {
+    @include max-width-tablet;
+    margin-bottom: 72px;
+  }
+  @media (min-width: $width-desktop) {
+    max-width: 100%;
+    margin-bottom: 82px;
+  }
+}
+
+.program__title {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  @include padding-mobile;
+  @include page-title;
+  @media (min-width: $width-tablet) {
+    margin-top: 57px;
+    margin-bottom: 56px;
+    @include padding-tablet;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  @media (min-width: $width-desktop) {
+    margin-top: 74px;
+    @include padding-desktop;
+  }
+}
+
+.program__text {
+  margin-top: 0;
+  margin-bottom: 39px;
+  @include padding-mobile;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-01;
+  text-transform: uppercase;
+  @media (min-width: $width-tablet) {
+    margin-bottom: 65px;
+    padding: 0 40px 0 70px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @media (min-width: $width-desktop) {
+    @include padding-desktop;
+  }
+}

@@ -1,0 +1,38 @@
+.social__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include list;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 38px;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+  @media (min-width: $width-tablet) {
+    margin-right: 28px;
+  }
+}
+
+.social__svg {
+  @include svg;
+  @media (min-width: $width-tablet) {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+  }
+}

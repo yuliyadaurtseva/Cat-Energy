@@ -1,0 +1,70 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $color-05;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: $color-09;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  &--promo {
+    width: calc(100% - 40px);
+    max-width: 550px;
+    padding: 11px;
+    font-size: 14px;
+    line-height: 18px;
+    @media (min-width: $width-tablet) {
+      width: 245px;
+      padding: 16px;
+      font-size: 20px;
+      line-height: 20px;  
+    }
+  }
+  &--catalog {
+    @media (min-width: $width-tablet) {
+      width: calc(100% - 38px - 38px);
+    }
+  }
+  &--more {
+    color: $color-03;
+    background-color: $color-04;
+    &:hover,
+    &:focus {
+      background-color: $color-13;
+    }
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }  
+  }
+  &--additional {
+    @media (min-width: $width-desktop) {
+      width: 27.375%;
+    }
+  }
+  &--submit {
+    @media (min-width: $width-tablet) {
+      width: 45.066%;
+      padding-top: 17px;
+      padding-bottom: 15px;
+    }    
+    @media (min-width: $width-desktop) {
+      width: 46.558%;
+    }
+  }
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

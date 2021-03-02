@@ -1,0 +1,97 @@
+.page-footer {
+  @include padding-mobile;
+  background-color: $color-04;
+  @media (min-width: $width-tablet) {
+    @include padding-tablet;
+    padding-top: 58px;
+    padding-bottom: 59px;
+  }
+  @media (min-width: $width-desktop) {
+    @include padding-desktop;
+    padding-top: 58px;
+    padding-bottom: 55px;
+  }
+}
+
+.page-footer__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include list;
+  @media (min-width: $width-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid $color-10;
+  &--logo {
+    padding-top: 39px;
+    padding-bottom: 31px;
+  }
+  &--social {
+    padding-top: 22px;
+    padding-bottom: 19px;
+  }
+  &--copyright {
+    display: flex;
+    justify-content: space-between;
+    @include max-width-mobile;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border: none;
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-03;
+    font-family: "Arial";  
+  }
+  @media (min-width: $width-tablet) {
+    width: auto;
+    padding: 0;
+    border: none;
+    &--logo {
+      padding-top: 3px;
+    }
+    &--copyright {
+      margin: 0;
+    }
+  }   
+  @media (min-width: $width-desktop) {
+    &--logo {
+      padding-top: 0;
+    }
+  }    
+}
+.page-footer__logo {
+  width: 128px;
+  height: 24px;
+  &[href] {
+    cursor: pointer;
+  }
+  &[href]:hover:hover .page-footer__logo-svg,
+  &[href]:hover:focus .page-footer__logo-svg{
+    fill-opacity: 0.8;
+  }
+  &[href]:hover:active .page-footer__logo-svg{
+    fill-opacity: 0.6;
+  }
+}
+
+.page-footer__logo-svg {
+  width: 128px;
+  height: 24px;
+  fill: $color-01;
+}
+
+.page-footer__htmlacademy-logo {
+  @include svg; 
+  cursor: pointer;
+  @media (min-width: $width-tablet) {
+    margin-left: 23px;
+  }
+}

@@ -1,0 +1,75 @@
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 22px;
+  padding-top: 27px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  background: 
+    url("../img/index-can-mobile@1x.png") no-repeat center 166px/280px 271px,
+    url("../img/index-background-mobile@1x.jpg") no-repeat center 0/320px 305px,
+    linear-gradient(to bottom, #65a93c 305px, #ffffff 305px);
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: 
+      url("../img/index-can-mobile@2x.png"),
+      url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to bottom, #65a93c 305px, #ffffff 305px);  
+  }
+  @media (min-width: $width-tablet) {
+    align-items: flex-start;
+    @include max-width-tablet;
+    margin-bottom: 0;
+    padding: 57px 120px 529px 117px;
+    color: $color-01;
+    text-align: start;
+    background: url("../img/index-can-tablet@1x.jpg") no-repeat center 258px/709px 609px;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-can-tablet@2x.jpg");
+    }
+  }
+  @media (min-width: $width-desktop) {
+    max-width: 100%;
+    margin-bottom: 80px;
+    padding: 222px 750px 189px 120px;
+    background: 
+      url("../img/index-can-desktop@1x.png") no-repeat 65.5% 142px/552px 499px,
+      url("../img/index-background-desktop@1x.jpg") no-repeat 111.3% 0/680px 696px,
+      linear-gradient(to right, #ffffff 50%, #65a93c 50%);
+  }
+}
+
+.promo__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: inherit;
+  @media (min-width: $width-tablet) {
+    margin-bottom: 41px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.promo__slogan {
+  margin-top: 0;
+  margin-bottom: 302px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  @media (min-width: $width-tablet) {
+    margin-bottom: 48px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  @media (min-width: $width-desktop) {
+    margin-bottom: 53px;
+  }
+}
